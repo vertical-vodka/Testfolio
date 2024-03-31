@@ -672,8 +672,17 @@ span {
     }
 
     .home-img {
-        width: 56vw;
+        margin-top: 3rem;
+        /* Adjust the margin-top as needed */
+        text-align: center;
+        /* Center the image horizontally */
     }
+
+    .home-img img {
+        width: 80%;
+        /* Adjust the width of the image as needed */
+    }
+
 
     .services h2 {
         margin-bottom: 3rem;
