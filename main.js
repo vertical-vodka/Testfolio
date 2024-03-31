@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("header nav a");
   const nameElement = document.getElementById("portfolio-name");
   const aboutElement = document.getElementById("portfolio-about");
-  // const logoElement = document.getElementById("portfolio-logo");
+  const profilePic = document.getElementById("profile-pic");
 
   // Function to update active navigation link based on scroll position
   const updateActiveNavLink = () => {
@@ -36,14 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Retrieve saved data from Local Storage
   const savedName = localStorage.getItem("editedName");
   const savedAbout = localStorage.getItem("editedAbout");
+  const savedProfilePic = localStorage.getItem("profilePic");
 
-  // Update name and about sections if data is available
+  // Update name, about, and profile picture if data is available
   if (savedName) {
     nameElement.textContent = savedName;
-    // logoElement.textContent = savedName; // Uncomment this line if you want to update the logo text with the saved name
   }
 
   if (savedAbout) {
     aboutElement.textContent = savedAbout;
+  }
+
+  if (savedProfilePic) {
+    profilePic.src = savedProfilePic;
   }
 });
